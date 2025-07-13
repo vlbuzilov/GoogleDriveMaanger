@@ -23,8 +23,7 @@ namespace GoogleDriveManager.Services
             request.Q = $"'{_folderId}' in parents";
             request.Fields = "files(id, name, mimeType, modifiedTime)";
 
-            var result = await request.ExecuteAsync();
-            return result.Files;
+            return (await request.ExecuteAsync()).Files;
         }
     }
 }

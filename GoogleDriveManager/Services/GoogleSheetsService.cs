@@ -37,9 +37,8 @@ namespace GoogleDriveManager.Services
             };
 
             var createRequest = _sheetsService.Spreadsheets.Create(spreadsheet);
-            var createResponse = await createRequest.ExecuteAsync();
 
-            return createResponse.SpreadsheetId;
+            return (await createRequest.ExecuteAsync()).SpreadsheetId;
         }
 
         public async Task UpdateSpreadsheetAsync(string spreadsheetId, IEnumerable<Google.Apis.Drive.v3.Data.File> files)
