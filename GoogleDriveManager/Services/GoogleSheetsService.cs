@@ -57,7 +57,7 @@ namespace GoogleDriveManager.Services
                     file.Id,
                     file.Name,
                     file.MimeType,
-                    file.CreatedTimeRaw?.ToString() ?? ""
+                    file.ModifiedTime?.ToString("g") ?? ""
                 });
             }
 

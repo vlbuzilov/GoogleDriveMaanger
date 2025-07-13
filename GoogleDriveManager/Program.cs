@@ -50,7 +50,7 @@ class Program
             }
 
             Console.WriteLine("Waiting 15 minutes before next sync...\n");
-            await Task.Delay(TimeSpan.FromMinutes(3));
+            await Task.Delay(TimeSpan.FromMinutes(15));
         }
     }
 }
